@@ -20,11 +20,11 @@ protected:
 	std::string id, name, city;
 	int year;
 	double salary;
-	/*
 	std::ostream& writeLegibly(std::ostream&);
-	friend std::ostream& operator<<(std::ostream& out, Staff& st) {
-		return st.writeLegibly(out);
+	friend std::ostream& operator<<(std::ostream& os, Staff& st) {
+		return st.writeLegibly(os);
 	}
+	/*
 	std::istream& readFromConsole(std::istream&);
 	friend std::istream& operator>>(std::istream& in, Staff& st) {
 		return st.readFromConsole(in);

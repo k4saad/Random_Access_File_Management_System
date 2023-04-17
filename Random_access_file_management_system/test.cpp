@@ -10,6 +10,13 @@ int main() {
 	database.seekp(0, std::ios::end);
 	s.writeToFile(database);
 	database.close();
+	std::cout << "------printing------" << std::endl;
+	database.open(fname, std::ios::in | std::ios::binary);
+	while (true) {
+		s.readFromFile(database);
+		if (database.eof()) break;
+		std::cout << s << std::endl;
+	}
+	database.close();
 	return 0;
-
 }
